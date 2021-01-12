@@ -1,8 +1,7 @@
 #!/bin/bash
-source ./functions.sh
+source ../loader.sh
 title "Installing pgsql..."
 
-apt_i postgresql \
-      postgresql-contrib \
-      php-pgsql
+apti postgresql postgresql-contrib
 service postgresql restart
+installed "php" && apti php-pgsql

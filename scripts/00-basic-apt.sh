@@ -1,8 +1,8 @@
 #!/bin/bash
-source ./functions.sh
+source ../loader.sh
 title "Installing basic software (apt)..."
 
-apt_i apt-transport-https \
+apti apt-transport-https \
       ca-certificates \
       curl \
       make \
@@ -25,5 +25,9 @@ apt_i apt-transport-https \
       gnome-software \
       # snap \
       gnome-software-plugin-snap \
-      default-jdk
+      default-jdk \
+      nodejs \
+      compiz \
+      compizconfig-settings-manager \
+      terminator
 apt upgrade -y

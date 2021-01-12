@@ -1,7 +1,7 @@
 #!/bin/bash
-source ./functions.sh
+source ../loader.sh
 title "Installing apache2..."
 
-apt_i apache2
+apti apache2
 service apache2 restart
 apache2 -v

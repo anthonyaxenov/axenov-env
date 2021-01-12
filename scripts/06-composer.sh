@@ -1,8 +1,8 @@
 #!/bin/bash
-source ./functions.sh
+source ../loader.sh
 title "Installing composer..."
 
-apt_i composer
+apti composer
 
 # title "Installing composer.phar in home dir..."
 # cd ~

@@ -1,9 +1,7 @@
 #!/bin/bash
-source ./functions.sh
+source ../loader.sh
 title "Installing mariadb..."
 
-apt_i mariadb-server \
-      mariadb-client \
-      php-mysql \
-      phpmyadmin
+apti mariadb-server mariadb-client
 mysql_secure_installation
+installed "php" && apti php-mysql phpmyadmin

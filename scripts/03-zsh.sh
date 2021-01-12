@@ -1,8 +1,8 @@
 #!/bin/bash
-source ./functions.sh
+source ../loader.sh
 title "Installing zsh + oh-my-zsh"
 
-apt_i zsh
+apti zsh
 
 chsh -s $(which zsh)
 

@@ -1,10 +1,10 @@
 #!/bin/bash
-source ./functions.sh
+source ../loader.sh
 PHPVER=7.4
 title "Installing php$PHPVER..."
 
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
-apt_i php$PHPVER \
+apti php$PHPVER \
     # php$PHPVER-common \
     # php$PHPVER-cli \
       php-xdebug \

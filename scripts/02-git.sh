@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./functions.sh
+source ../loader.sh
 GITVER="2.30.0"
 title "Installing git-$GITVER..."
 
