@@ -14,14 +14,14 @@ if installed git
 then
     sudo git clone git@github.com:PapirusDevelopmentTeam/papirus-icon-theme.git /usr/src/papirus
 else
-    wget https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/master.zip -O /usr/src/papirus2.zip
-    unzip /usr/src/papirus2.zip -d /usr/src/papirus2
-    rm -f /usr/src/papirus.zip
+    sudo wget https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/master.zip -O /usr/src/papirus2.zip
+    sudo unzip /usr/src/papirus2.zip -d /usr/src/papirus2
+    sudo rm -f /usr/src/papirus.zip
 fi
-# ln -s /usr/src/papirus/ePapirus /var/share/icons/ePapirus
-ln -s /usr/src/papirus/Papirus /var/share/icons/Papirus
-ln -s /usr/src/papirus/Papirus-Dark /var/share/icons/Papirus-Dark
-ln -s /usr/src/papirus/Papirus-Light /var/share/icons/Papirus-Light
+# sudo ln -s /usr/src/papirus/ePapirus /var/share/icons/ePapirus
+sudo ln -s /usr/src/papirus/Papirus /var/share/icons/Papirus
+sudo ln -s /usr/src/papirus/Papirus-Dark /var/share/icons/Papirus-Dark
+sudo ln -s /usr/src/papirus/Papirus-Light /var/share/icons/Papirus-Light
 
 dconf write /org/mate/marco/general/theme "'Budgie'"
 dconf write /org/mate/desktop/interface/gtk-theme "'Budgie'"
