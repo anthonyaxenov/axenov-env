@@ -2,6 +2,8 @@
 source ../loader.sh
 title "Installing basic software (snap)..."
 
+snap install core
+snap refresh core
 #snapi snapd
 snapi snap-store
 snapi telegram-desktop
@@ -21,4 +23,7 @@ snapi kde-frameworks-5-core18
 snapi onlyoffice-desktopeditors
 snapi postman
 snapi zoom-client
-#snapi obs-studio
+snapi obs-studio
+
+snapi certbot # https://certbot.eff.org/
+sudo ln -s /snap/bin/certbot /usr/bin/certbot

@@ -2,7 +2,12 @@
 source ../loader.sh
 title "Installing composer..."
 
-apti composer
+if installed php
+then
+    apti composer
+else
+    echo "*** You need to have php installed"
+fi
 
 # title "Installing composer.phar in home dir..."
 # cd ~

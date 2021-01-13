@@ -3,7 +3,7 @@ source ../loader.sh
 PHPVER=7.4
 title "Installing php$PHPVER..."
 
-LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
+sudo LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 apti php$PHPVER \
     # php$PHPVER-common \
     # php$PHPVER-cli \

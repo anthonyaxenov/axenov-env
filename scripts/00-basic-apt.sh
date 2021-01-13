@@ -29,5 +29,6 @@ apti apt-transport-https \
       nodejs \
       compiz \
       compizconfig-settings-manager \
-      terminator
-apt upgrade -y
+      terminator \
+      dconf-editor
+sudo apt upgrade -y --autoremove

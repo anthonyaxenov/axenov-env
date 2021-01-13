@@ -3,8 +3,7 @@ source ../loader.sh
 title "Installing zsh + oh-my-zsh"
 
 apti zsh
-
-chsh -s $(which zsh)
+# sudo chsh -s $(which zsh)
 
 # Based on:
 # https://github.com/Powerlevel9k/powerlevel9k/wiki/Install-Instructions
