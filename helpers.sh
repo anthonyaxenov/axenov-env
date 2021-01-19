@@ -10,12 +10,11 @@ title() {
 }
 
 apti() {
-    sudo apt update -y
     sudo apt install -y --autoremove $@
 }
 
 snapi() {
-    snap install $1 2>/dev/null
+    snap install $1 2>&1
     [[ $? -ne 0 ]] && snap install $1 --classic
 }
 

@@ -1,26 +1,41 @@
 #!/bin/bash
-source ../loader.sh
+# https://pecl.php.net/package/oci8
+source ../helpers.sh
 title "Installing oci8..."
 
 #check for # wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-basic-linuxx64.zip
-#wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-basiclite-linuxx64.zip -- only libociicus.so
+# wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-basiclite-linuxx64.zip -- only libociicus.so
 # wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-sqlplus-linuxx64.zip
 # wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-tools-linuxx64.zip
 # wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-sdk-linuxx64.zip
 #unzip
 
-mkdir /opt/oracle/
-mv ~/Downloads/instantclient/ /opt/oracle/
+sudo mkdir /opt/oracle/
+sudo mv ~/Downloads/instant_client/ /opt/oracle/
+sudo chown $USER:$USER /opt/oracle/
+#sudo chmod 0664 files
+#sudo chmod 0775 dirs
 
-sh -c "echo /opt/oracle/instantclient > /etc/ld.so.conf.d/oracle-instantclient.conf"
-ldconfig
+sudo sh -c "echo /opt/oracle/instant_client > /etc/ld.so.conf.d/oracle-instantclient.conf"
+sudo ldconfig
 
-aptinstall php-dev php-pear build-essential libaio1 default-jdk
-pecl channel-update pecl.php.net
-pecl install oci8
+apti php-dev php-pear build-essential libaio1 default-jdk
+sudo pecl channel-update pecl.php.net
+#sudo pecl install oci8 # php8
+sudo pecl install oci8-2.2.0 # php7
+
 #sh -c "echo '; priority=10' > /etc/php/7.4/mods-available/oci8.ini"
-sh -c "echo 'extension=oci8.so' >> /etc/php/7.4/mods-available/oci8.ini"
-chmod 644 /etc/php/7.4/mods-available/oci8.ini
-phpenmod oci8
+sudo sh -c "echo 'extension=oci8.so' >> /etc/php/7.4/mods-available/oci8.ini"
+sudo chmod 0644 /etc/php/7.4/mods-available/oci8.ini
+sudo phpenmod oci8
 php -i | grep oci8
+
+# instantclient,/opt/oracle/instant_client
+
+
+
+
+
+
+
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../loader.sh
+source ../helpers.sh
 title "Installing git..."
 
 sudo wget https://github.com/git/git/archive/master.zip -O /usr/src/git.zip

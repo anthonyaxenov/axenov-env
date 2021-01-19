@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../loader.sh
+source ../helpers.sh
 title "Installing basic software (snap)..."
 
 snap install core
@@ -24,6 +24,6 @@ snapi onlyoffice-desktopeditors
 snapi postman
 snapi zoom-client
 snapi obs-studio
-
+snapi peek
 snapi certbot # https://certbot.eff.org/
 sudo ln -s /snap/bin/certbot /usr/bin/certbot

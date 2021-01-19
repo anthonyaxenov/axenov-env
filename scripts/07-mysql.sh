@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../loader.sh
+source ../helpers.sh
 title "Installing mariadb..."
 
 apti mariadb-server mariadb-client
