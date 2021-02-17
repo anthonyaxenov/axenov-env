@@ -10,8 +10,8 @@
 
 <!-- meaningfull constants -->
 
-<constant name="C_title_focused" value="#afb8c6" />
-<constant name="C_title_unfocused" value="#8a939f" />
+<constant name="C_header_focused" value="#afb8c6" />
+<constant name="C_header_unfocused" value="#8a939f" />
 
 <constant name="C_wm_bg_focused" value="#2f343f" />
 <constant name="C_wm_bg_unfocused" value="#2f343f" />
@@ -40,70 +40,70 @@
 
 <!-- geometries -->
 
-<frame_geometry name="normal" title_scale="medium" rounded_top_left="1" rounded_top_right="1">
+<frame_geometry name="normal" header_scale="medium" rounded_top_left="1" rounded_top_right="1">
 	<distance name="left_width" value="1" />
 	<distance name="right_width" value="1" />
 	<distance name="bottom_height" value="3" />
-	<distance name="left_titlebar_edge" value="2"/>
-	<distance name="right_titlebar_edge" value="2"/>
-	<distance name="title_vertical_pad" value="3"/>
-	<border name="title_border" left="10" right="10" top="3" bottom="3"/>
+	<distance name="left_headerbar_edge" value="2"/>
+	<distance name="right_headerbar_edge" value="2"/>
+	<distance name="header_vertical_pad" value="3"/>
+	<border name="header_border" left="10" right="10" top="3" bottom="3"/>
 	<border name="button_border" left="3" right="3" top="0" bottom="0"/>
 	<aspect_ratio name="button" value="1.0" />
 </frame_geometry>
 
-<frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="1" rounded_top_right="1" parent="normal">
+<frame_geometry name="normal_unfocused" header_scale="medium" rounded_top_left="1" rounded_top_right="1" parent="normal">
 </frame_geometry>
 
-<frame_geometry name="max" title_scale="medium" parent="normal" rounded_top_left="false" rounded_top_right="false">
+<frame_geometry name="max" header_scale="medium" parent="normal" rounded_top_left="false" rounded_top_right="false">
 	<distance name="left_width" value="0" />
 	<distance name="right_width" value="0" />
 	<distance name="bottom_height" value="0" />
-	<distance name="left_titlebar_edge" value="0"/>
-	<distance name="right_titlebar_edge" value="0"/>
-	<distance name="title_vertical_pad" value="2"/> <!-- 
+	<distance name="left_headerbar_edge" value="0"/>
+	<distance name="right_headerbar_edge" value="0"/>
+	<distance name="header_vertical_pad" value="2"/> <!--
 							This needs to be 1 less then the
-							title_vertical_pad on normal state
+							header_vertical_pad on normal state
 							or you'll have bigger buttons		-->
 	<distance name="bottom_height" value="0" />
 </frame_geometry>
 
-<frame_geometry name="small" title_scale="small" parent="normal" hide_buttons="true" rounded_top_left="1" rounded_top_right="1">
-	<distance name="title_vertical_pad" value="7"/>
-	<border name="title_border" left="10" right="10" top="0" bottom="1"/>
+<frame_geometry name="small" header_scale="small" parent="normal" hide_buttons="true" rounded_top_left="1" rounded_top_right="1">
+	<distance name="header_vertical_pad" value="7"/>
+	<border name="header_border" left="10" right="10" top="0" bottom="1"/>
 </frame_geometry>
 
 <frame_geometry name="small_unfocused" parent="small">
-	<distance name="left_titlebar_edge" value="1"/>
-	<distance name="right_titlebar_edge" value="1"/>
+	<distance name="left_headerbar_edge" value="1"/>
+	<distance name="right_headerbar_edge" value="1"/>
 </frame_geometry>
 
-<frame_geometry name="borderless" has_title="false" rounded_top_left="false" rounded_top_right="false" parent="normal" >
+<frame_geometry name="borderless" has_header="false" rounded_top_left="false" rounded_top_right="false" parent="normal" >
 	<distance name="left_width" value="0" />
 	<distance name="right_width" value="0" />
 	<distance name="bottom_height" value="0" />
-	<distance name="title_vertical_pad" value="0" />
-	<border name="title_border" left="10" right="10" top="0" bottom="0" />
+	<distance name="header_vertical_pad" value="0" />
+	<border name="header_border" left="10" right="10" top="0" bottom="0" />
 </frame_geometry>
 
-<frame_geometry name="modal" title_scale="small" hide_buttons="true" rounded_top_left="1" rounded_top_right="1" parent="small">
-	<distance name="title_vertical_pad" value="5"/>
+<frame_geometry name="modal" header_scale="small" hide_buttons="true" rounded_top_left="1" rounded_top_right="1" parent="small">
+	<distance name="header_vertical_pad" value="5"/>
 </frame_geometry>
 
 <!-- drawing operations -->
 
-	<!-- title -->
+	<!-- header -->
 
-<draw_ops name="title_focused">
-	<title x="(0 `max` ((width - title_width) / 2)) + 2"
-               y="(0 `max` ((height - title_height) / 2)) + 1"
-               color="C_title_focused" />
+<draw_ops name="header_focused">
+	<header x="(0 `max` ((width - header_width) / 2)) + 2"
+               y="(0 `max` ((height - header_height) / 2)) + 1"
+               color="C_header_focused" />
 </draw_ops>
 
-<draw_ops name="title_unfocused">
-	<title x="(0 `max` ((width - title_width) / 2)) + 2"
-               y="(0 `max` ((height - title_height) / 2)) + 1"
-               color="C_title_unfocused"/>
+<draw_ops name="header_unfocused">
+	<header x="(0 `max` ((width - header_width) / 2)) + 2"
+               y="(0 `max` ((height - header_height) / 2)) + 1"
+               color="C_header_unfocused"/>
 </draw_ops>
 
 	<!-- window decorations -->
@@ -116,25 +116,25 @@
 	<rectangle color="C_wm_bg_unfocused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
-<draw_ops name="titlebar_focused">
+<draw_ops name="headerbar_focused">
 	<rectangle color="C_wm_bg_focused" x="0" y="0" width="width" height="height" filled="true" />
 	<rectangle color="C_wm_highlight" x="0" y="0" width="width" height="1" filled="true" />
 </draw_ops>
 
-<draw_ops name="titlebar_unfocused">
+<draw_ops name="headerbar_unfocused">
 	<rectangle color="C_wm_bg_unfocused" x="0" y="0" width="width" height="height" filled="true" />
 	<rectangle color="C_wm_highlight" x="0" y="0" width="width" height="1" filled="true" />
 </draw_ops>
 
-<draw_ops name="titlebar_max">
+<draw_ops name="headerbar_max">
 
 </draw_ops>
 
-<draw_ops name="titlebar_small_focused">
+<draw_ops name="headerbar_small_focused">
 
 </draw_ops>
 
-<draw_ops name="titlebar_small_unfocused">
+<draw_ops name="headerbar_small_unfocused">
 
 </draw_ops>
 
@@ -257,8 +257,8 @@
 
 <frame_style name="normal_focused" geometry="normal">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused" />
-	<piece position="title" draw_ops="title_focused" />
+	<piece position="headerbar" draw_ops="headerbar_focused" />
+	<piece position="header" draw_ops="header_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
@@ -286,8 +286,8 @@
 
 <frame_style name="normal_unfocused" geometry="normal_unfocused">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_unfocused" />
-	<piece position="title" draw_ops="title_unfocused" />
+	<piece position="headerbar" draw_ops="headerbar_unfocused" />
+	<piece position="header" draw_ops="header_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight"/>
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed"/>
@@ -318,8 +318,8 @@
 
 <frame_style name="normal_max_focused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_max" />
-	<piece position="title" draw_ops="title_focused" />
+	<piece position="headerbar" draw_ops="headerbar_max" />
+	<piece position="header" draw_ops="header_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
@@ -347,8 +347,8 @@
 
 <frame_style name="normal_max_unfocused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_max" />
-	<piece position="title" draw_ops="title_unfocused" />
+	<piece position="headerbar" draw_ops="headerbar_max" />
+	<piece position="header" draw_ops="header_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight"/>
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed"/>
@@ -379,8 +379,8 @@
 
 <frame_style name="normal_max_shaded_focused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_max" />
-	<piece position="title" draw_ops="title_focused" />
+	<piece position="headerbar" draw_ops="headerbar_max" />
+	<piece position="header" draw_ops="header_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
@@ -408,8 +408,8 @@
 
 <frame_style name="normal_max_shaded_unfocused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_max" />
-	<piece position="title" draw_ops="title_unfocused" />
+	<piece position="headerbar" draw_ops="headerbar_max" />
+	<piece position="header" draw_ops="header_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight"/>
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed"/>
@@ -440,8 +440,8 @@
 
 <frame_style name="dialog_focused" geometry="normal">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused" />
-	<piece position="title" draw_ops="title_focused" />
+	<piece position="headerbar" draw_ops="headerbar_focused" />
+	<piece position="header" draw_ops="header_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
@@ -469,8 +469,8 @@
 
 <frame_style name="dialog_unfocused" geometry="normal">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_unfocused" />
-	<piece position="title" draw_ops="title_unfocused" />
+	<piece position="headerbar" draw_ops="headerbar_unfocused" />
+	<piece position="header" draw_ops="header_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight"/>
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed"/>
@@ -499,8 +499,8 @@
 
 <frame_style name="modal_dialog_focused" geometry="modal">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused" />
-	<piece position="title" draw_ops="title_focused" />
+	<piece position="headerbar" draw_ops="headerbar_focused" />
+	<piece position="header" draw_ops="header_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
@@ -527,8 +527,8 @@
 
 <frame_style name="modal_dialog_unfocused" geometry="modal">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_focused" />
-	<piece position="title" draw_ops="title_unfocused" />
+	<piece position="headerbar" draw_ops="headerbar_focused" />
+	<piece position="header" draw_ops="header_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight"/>
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed"/>
@@ -559,8 +559,8 @@
 
 <frame_style name="utility_focused" geometry="small">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_small_focused" />
-	<piece position="title" draw_ops="title_focused" />
+	<piece position="headerbar" draw_ops="headerbar_small_focused" />
+	<piece position="header" draw_ops="header_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
@@ -588,8 +588,8 @@
 
 <frame_style name="utility_unfocused" geometry="small_unfocused">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_small_unfocused" />
-	<piece position="title" draw_ops="title_unfocused" />
+	<piece position="headerbar" draw_ops="headerbar_small_unfocused" />
+	<piece position="header" draw_ops="header_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight"/>
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed"/>

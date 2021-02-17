@@ -375,7 +375,7 @@ StScrollBar {
 .popup-device-menu-item {
   spacing: .5em; }
 
-.popup-subtitle-menu-item {
+.popup-subheader-menu-item {
   font-weight: normal; }
 
 .nm-menu-item-icons {
@@ -570,7 +570,7 @@ StScrollBar {
   spacing: 8px;
   padding-bottom: 10px; }
 
-.about-title {
+.about-header {
   font-size: 2em;
   font-weight: bold; }
 
@@ -1038,7 +1038,7 @@ StScrollBar {
     padding-top: 10px;
     height: 30px; }
 
-.menu-selected-app-title {
+.menu-selected-app-header {
   font-weight: bold; }
 
 .menu-selected-app-description {

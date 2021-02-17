@@ -1,6 +1,6 @@
 #!/bin/bash
-source ../loader.sh
-title "Installing theme..."
+source "../src/01-common.sh" || exit 50
+header "Installing theme..."
 
 # theme
 sudo cp -R ../theme/Budgie /usr/share/themes/Budgie

@@ -18,7 +18,7 @@
    sodipodi:docname="min-icon.svg"><metadata
      id="metadata26"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:header /></cc:Work></rdf:RDF></metadata><defs
      id="defs24" /><sodipodi:namedview
      pagecolor="#e2e2e2"
      bordercolor="#666666"
@@ -50,7 +50,7 @@
        enabled="true"
        snapvisiblegridlinesonly="true" /></sodipodi:namedview><g
      style="display:inline"
-     id="titlebutton-min"
+     id="headerbutton-min"
      inkscape:label="#g6247"
      transform="translate(-587,185.63782)"><g
        id="g7138"

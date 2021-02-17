@@ -1,6 +1,6 @@
 #!/bin/bash
-source ../loader.sh
-title "Installing basic software (snap)..."
+source "../src/01-common.sh" || exit 50
+header "Installing basic software (snap)..."
 
 snap install core
 snap refresh core
@@ -20,10 +20,9 @@ snapi gtk-common-themes
 snapi gtk2-common-themes
 snapi kde-frameworks-5-core18
 #snapi liquibase
-snapi onlyoffice-desktopeditors
 snapi postman
 snapi zoom-client
 snapi obs-studio
-
+snapi peek
 snapi certbot # https://certbot.eff.org/
 sudo ln -s /snap/bin/certbot /usr/bin/certbot

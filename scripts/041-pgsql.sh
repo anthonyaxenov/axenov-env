@@ -1,6 +1,6 @@
 #!/bin/bash
-source ../loader.sh
-title "Installing pgsql..."
+source "../src/01-common.sh" || exit 50
+header "Installing pgsql..."
 
 apti postgresql postgresql-contrib
 sudo service postgresql restart

@@ -1,6 +1,6 @@
 #!/bin/bash
-source ../loader.sh
-title "Installing mariadb..."
+source "../src/01-common.sh" || exit 50
+header "Installing mariadb..."
 
 apti mariadb-server mariadb-client
 sudo mysql_secure_installation

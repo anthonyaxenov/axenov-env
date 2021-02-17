@@ -1,6 +1,6 @@
 #!/bin/bash
-source ../loader.sh
-title "Installing zsh + oh-my-zsh"
+source "../src/01-common.sh" || exit 50
+header "Installing zsh + oh-my-zsh"
 
 apti zsh
 # sudo chsh -s $(which zsh)
@@ -33,8 +33,8 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 echo ""
 echo "4. Installing autosuggestions and syntax highlighting..."
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git .oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 sed -i 's@plugins=(git)@plugins=(git zsh-autosuggestions zsh-syntax-highlighting)@g' ~/.zshrc
 
 echo ""

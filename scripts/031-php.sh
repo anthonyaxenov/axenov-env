@@ -1,7 +1,7 @@
 #!/bin/bash
-source ../loader.sh
+source "../src/01-common.sh" || exit 50
 PHPVER=7.4
-title "Installing php$PHPVER..."
+header "Installing php$PHPVER..."
 
 sudo LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 apti php$PHPVER \

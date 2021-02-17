@@ -1,6 +1,6 @@
 #!/bin/bash
-source ../loader.sh
-title "Installing git..."
+source "../src/01-common.sh" || exit 50
+header "Installing git..."
 
 sudo wget https://github.com/git/git/archive/master.zip -O /usr/src/git.zip
 sudo unzip /usr/src/git.zip -d /usr/src/git

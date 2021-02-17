@@ -1,12 +1,13 @@
 #!/bin/bash
+source "./../src/00-io.sh"
 #[ $(id -u) -ne 0 ] && echo "You must run this script with sudo" && exit 1
 
-title() {
-    echo ""
-    echo "==============================================="
-    echo "  $1"
-    echo "==============================================="
-    echo ""
+header() {
+    info ""
+    info "==============================================="
+    info "  $1"
+    info "==============================================="
+    info ""
 }
 
 apti() {
@@ -21,4 +22,9 @@ snapi() {
 
 installed() {
     command -v "$1" >/dev/null 2>&1
+}
+
+die() {
+    error "$1"
+    exit $2 || 1
 }
