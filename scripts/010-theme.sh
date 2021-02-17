@@ -10,8 +10,7 @@ sudo cp -R ../theme/Bridge /usr/share/icons/Bridge
 sudo cp -R ../theme/Capitaine /usr/share/icons/Capitaine
 
 # icons
-if installed git
-then
+if installed git; then
     sudo git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git /usr/src/papirus
 else
     sudo wget https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/master.zip -O /usr/src/papirus.zip
