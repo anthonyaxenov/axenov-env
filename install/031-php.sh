@@ -1,5 +1,5 @@
 #!/bin/bash
-source "../src/01-common.sh" || exit 50
+. "../src/01-common.sh" || exit 5
 PHPVER=7.4
 header "Installing php$PHPVER..."
 

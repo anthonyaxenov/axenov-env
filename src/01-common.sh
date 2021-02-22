@@ -1,6 +1,6 @@
 #!/bin/bash
+set -e
 source "./../src/00-io.sh"
-#[ $(id -u) -ne 0 ] && echo "You must run this script with sudo" && exit 1
 
 header() {
     info ""
@@ -27,4 +27,16 @@ installed() {
 die() {
     error "$1"
     exit $2 || 1
+}
+
+require_root() {
+    [ $(id -u) > "0" ] && die "You must run this script with sudo!" 1
+}
+
+require_user() {
+    [ $(id -u) == "0" ] && die "You must run this script WITHOUT sudo!" 2
+}
+
+require_start() {
+    [ -z "$ENVDIR" ] && die "You must run start.sh to execute this script!" 3
 }

@@ -1,5 +1,5 @@
 #!/bin/bash
-source "../src/01-common.sh" || exit 50
+. "../src/01-common.sh" || exit 5
 header "Installing basic software (apt)..."
 
 apti apt-transport-https \
@@ -21,7 +21,7 @@ apti apt-transport-https \
     nano \
     neofetch \
     ubuntu-restricted-extras \
-    # snap \
+    snap \
     gnome-software \
     gnome-software-plugin-snap \
     default-jdk \
@@ -36,7 +36,11 @@ apti apt-transport-https \
     redshift \
     gparted \
     minder \
+    earlyoom \
+    hardinfo \
     libreoffice \
+    pulseeffects lsp-plugins \
+    # etckeeper \
     deepin-screenshot
 
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
