@@ -8,7 +8,7 @@
 sudo ./start.sh
 ```
 
-Команда обработает все `*.sh`-скрипты из [`/scripts`](/scripts) по порядку.
+Команда обработает все `*.sh`-скрипты из [`/install`](/install) по порядку.
 
 Также устанавливает визуальное оформление:
 * тема: [Budgie Desktop Dark Theme](https://www.pling.com/p/1276879)
