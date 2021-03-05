@@ -1,12 +1,16 @@
 # Common
-alias upgrade='sudo apt update && sudo apt upgrade -y'
+own() {
+    sudo chmod 0664 -R --preserve-root $@
+    sudo chown $USER. -R --preserve-root $@
+}
 #alias aliases='source ~/install/aliases && cat ~/install/aliases'
 alias aliases='source ~/install/aliases'
 alias zshrc='source ~/.zshrc'
 alias wine='LANG=ru_RU.utf8 wine'
-alias duh='du -h --max-depth=1'
-alias sduh='sudo du -h --max-depth=1'
-alias dfh='df -h'
+alias upgrade='sudo apt update && sudo apt upgrade -y'
+alias duh='du -ha --max-depth=1'
+alias sduh='sudo du -ha --max-depth=1'
+alias ports='netstat -tulanp'
 
 # Navigation
 alias projects='cd ~/projects'
