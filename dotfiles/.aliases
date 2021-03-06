@@ -45,12 +45,7 @@ alias mysqlstatus='sudo systemctl status mysql'
 # php
 alias phprestart='sudo systemctl restart php-fpm'
 
-
 # Docker
 alias dockerstart='sudo systemctl start docker'
 alias dockerrestart='sudo systemctl restart docker'
 alias dockerstop='sudo systemctl stop docker'
-
-# BARS & MIS
-alias bars='cd ~/bars'
-alias mis='~/bars/misflow/mis.sh'
