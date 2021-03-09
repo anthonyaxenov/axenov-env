@@ -7,7 +7,6 @@ snap refresh core
 #snapi snapd
 snapi snap-store
 snapi telegram-desktop
-snapi chromium
 snapi code
 snapi phpstorm
 snapi skype
