@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+        <dc:header>Gnome Symbolic Icon Theme</dc:header>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -90,8 +90,8 @@
        type="xygrid"
        visible="true" />
   </sodipodi:namedview>
-  <title
-     id="title9167">Gnome Symbolic Icon Theme</title>
+  <header
+     id="header9167">Gnome Symbolic Icon Theme</header>
   <defs
      id="defs7386">
     <linearGradient

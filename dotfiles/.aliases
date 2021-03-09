@@ -1,24 +1,27 @@
 # Common
+own() {
+    sudo chmod 0664 -R --preserve-root $@
+    sudo chown $USER. -R --preserve-root $@
+}
 #alias aliases='source ~/install/aliases && cat ~/install/aliases'
 alias aliases='source ~/install/aliases'
 alias zshrc='source ~/.zshrc'
 alias wine='LANG=ru_RU.utf8 wine'
 alias upgrade='sudo apt update && sudo apt upgrade -y'
-alias duh='du -h --max-depth=1'
-alias sduh='sudo du -h --max-depth=1'
+alias duh='du -ha --max-depth=1'
+alias sduh='sudo du -ha --max-depth=1'
+alias ports='netstat -tulanp'
 
 # Navigation
-alias sites='cd ~/sites'
-alias projects='cd ~/Projects'
-alias ots='cd ~/Projects/ots'
+alias projects='cd ~/projects'
 alias Downloads='cd ~/Downloads'
 
 # apache2
 alias a2ls='ls -al /etc/apache2/sites-available/'
 alias a2slen='ls -al /etc/apache2/sites-enabled/'
 alias a2err='sudo tail /var/log/apache2/error_log'
-alias a2errclr='sudo truncate -s0 "/var/log/apache2/error_log"'
-alias a2rest='sudo systemctl restart apache2'
+#alias a2errclr='sudo truncate -s0 "/var/log/apache2/error_log"'
+alias a2restart='sudo systemctl restart apache2'
 alias a2reload='sudo systemctl reload apache2'
 
 # nginx
@@ -33,21 +36,16 @@ alias a2reload='sudo systemctl reload apache2'
 # mysql
 alias mysqlstart='sudo systemctl start mysql'
 alias mysqlstop='sudo systemctl stop mysql'
-alias mysqlrest='sudo systemctl restart mysql'
+alias mysqlrestart='sudo systemctl restart mysql'
 alias mysqlstatus='sudo systemctl status mysql'
 
+# pgsql
+#alias psql='sudo -u postgres psql'
+
 # php
-alias phprest='sudo systemctl restart php-fpm'
+alias phprestart='sudo systemctl restart php-fpm'
 
 # Docker
-alias dockerst='sudo systemctl start docker'
-alias dockerrest='sudo systemctl restart docker'
+alias dockerstart='sudo systemctl start docker'
+alias dockerrestart='sudo systemctl restart docker'
 alias dockerstop='sudo systemctl stop docker'
-
-# Other soft
-#alias plsqldev='WINEPREFIX="/home/anthony/.wine" WINEARCH=win32 LC_TYPE=ru_RU.utf8 wine start /Unix /home/anthony/.wine/drive_c/Program\ Files/PLSQL\ Developer/plsqldev.exe'
-
-# BARS & MIS
-alias mis='~/bars/misflow/mis.sh'
-alias bars='cd ~/bars'
-alias lb='liquibase'

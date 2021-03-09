@@ -393,7 +393,7 @@ StScrollBar {
   spacing: 20px;
   padding: 24px; }
 
-.audio-selection-title {
+.audio-selection-header {
   font-weight: bold;
   text-align: center; }
 
@@ -425,9 +425,9 @@ StScrollBar {
   .access-dialog-icon {
     min-width: 48px;
     icon-size: 48px; }
-  .access-dialog-title {
+  .access-dialog-header {
     font-weight: bold; }
-  .access-dialog-subtitle {
+  .access-dialog-subheader {
     color: #D3DAE3;
     font-weight: bold; }
 
@@ -439,7 +439,7 @@ StScrollBar {
     spacing: 20px; }
   .geolocation-dialog-icon {
     icon-size: 48px; }
-  .geolocation-dialog-title {
+  .geolocation-dialog-header {
     font-weight: bold; }
   .geolocation-dialog-reason {
     color: #D3DAE3;
@@ -813,8 +813,8 @@ StScrollBar {
 .datemenu-today-button,
 .world-clocks-button,
 .weather-button,
-.message-list-section-title,
-.events-section-title {
+.message-list-section-header,
+.events-section-header {
   border-radius: 3px;
   padding: .4em; }
 
@@ -827,8 +827,8 @@ StScrollBar {
 .datemenu-today-button,
 .world-clocks-button,
 .weather-button,
-.message-list-section-title,
-.events-section-title {
+.message-list-section-header,
+.events-section-header {
   padding: 7px 10px 7px 10px;
   border: 1px solid rgba(64, 69, 82, 0); }
   .datemenu-today-button:hover, .datemenu-today-button:focus,
@@ -836,10 +836,10 @@ StScrollBar {
   .world-clocks-button:focus,
   .weather-button:hover,
   .weather-button:focus,
-  .message-list-section-title:hover,
-  .message-list-section-title:focus,
-  .events-section-title:hover,
-  .events-section-title:focus {
+  .message-list-section-header:hover,
+  .message-list-section-header:focus,
+  .events-section-header:hover,
+  .events-section-header:focus {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #D3DAE3;
     background-color: #505666;
@@ -848,8 +848,8 @@ StScrollBar {
   .datemenu-today-button:active,
   .world-clocks-button:active,
   .weather-button:active,
-  .message-list-section-title:active,
-  .events-section-title:active {
+  .message-list-section-header:active,
+  .events-section-header:active {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #ffffff;
     background-color: #5294e2;
@@ -861,8 +861,8 @@ StScrollBar {
 
 .world-clocks-header,
 .weather-header,
-.message-list-section-title,
-.events-section-title {
+.message-list-section-header,
+.events-section-header {
   color: rgba(211, 218, 227, 0.4);
   font-weight: bold; }
 
@@ -986,7 +986,7 @@ StScrollBar {
     spacing: 1.5em; }
   .message-list-section, .message-list-section-list {
     spacing: 0.7em; }
-  .message-list-section-list-title-box {
+  .message-list-section-list-header-box {
     spacing: 0.4em; }
   .message-list-placeholder StIcon {
     width: 0;
@@ -1042,7 +1042,7 @@ StScrollBar {
     color: rgba(255, 255, 255, 0.6); }
   .message-secondary-bin > StIcon {
     icon-size: 16px; }
-  .message-title {
+  .message-header {
     color: inherit;
     font-weight: bold;
     font-size: 1em;
@@ -1233,7 +1233,7 @@ StScrollBar {
   spacing: 12px;
   padding: 12px; }
 
-.list-search-result-title {
+.list-search-result-header {
   font-size: 1.5em;
   color: white; }
 
@@ -2029,7 +2029,7 @@ StScrollBar {
   font-size: .9em;
   font-style: italic; }
 
-.lg-obj-inspector-title {
+.lg-obj-inspector-header {
   spacing: 4px; }
 
 .lg-obj-inspector-button {

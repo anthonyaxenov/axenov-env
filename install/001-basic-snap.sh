@@ -20,7 +20,6 @@ snapi gtk-common-themes
 snapi gtk2-common-themes
 snapi kde-frameworks-5-core18
 #snapi liquibase
-snapi onlyoffice-desktopeditors
 snapi postman
 snapi zoom-client
 snapi obs-studio

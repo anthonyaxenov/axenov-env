@@ -3,12 +3,12 @@ button_spacing=4
 
 show_app_icon=true
 
-full_width_title=true
+full_width_header=true
 
-title_shadow_active=false
-title_shadow_inactive=false
+header_shadow_active=false
+header_shadow_inactive=false
 
-title_horizontal_offset=3
+header_horizontal_offset=3
 
 active_text_color=#afb8c5
 active_text_shadow_color=#2f343b

@@ -9,7 +9,7 @@ else
     echo "*** You need to have php installed"
 fi
 
-# title "Installing composer.phar in home dir..."
+# header "Installing composer.phar in home dir..."
 # cd ~
 # EXPECTED_SIGNATURE="$(wget -q -O - https://composer.github.io/installer.sig)"
 # php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

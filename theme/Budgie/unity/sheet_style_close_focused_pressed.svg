@@ -124,7 +124,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:header></dc:header>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -135,7 +135,7 @@
      transform="translate(0,-1028.3622)">
     <g
        style="display:inline;opacity:0.4"
-       id="titlebutton-close-backdrop-dark"
+       id="headerbutton-close-backdrop-dark"
        inkscape:label="#g6210"
        transform="translate(-641.00002,1218)">
       <g

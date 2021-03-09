@@ -156,7 +156,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:header />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -167,7 +167,7 @@
      transform="translate(0,-1028.3622)">
     <g
        style="display:inline"
-       id="titlebutton-max-hover-dark"
+       id="headerbutton-max-hover-dark"
        inkscape:label="#g6284"
        transform="translate(-509,1218)">
       <g
@@ -254,7 +254,7 @@
     </g>
     <g
        style="display:inline"
-       id="titlebutton-max-active-dark"
+       id="headerbutton-max-active-dark"
        inkscape:label="#g6356"
        transform="translate(-408.00001,1218)">
       <g
