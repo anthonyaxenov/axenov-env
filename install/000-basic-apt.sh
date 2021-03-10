@@ -41,7 +41,10 @@ apti apt-transport-https \
     libreoffice \
     pulseeffects lsp-plugins \
     # etckeeper \
-    deepin-screenshot
+    deepin-screenshot \
+    redshift \
+    redshift-gtk \
+    geoclue-2.0
 
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 apti grub-customizer
